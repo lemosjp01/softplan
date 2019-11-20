@@ -12,9 +12,9 @@ export const {
   fetchUsersSuccess,
   fetchUsersFail,
 } = createActions({
-  FETCH_CURRENT_ASSIGNMENT_START: params => ({params}),
-  FETCH_CURRENT_ASSIGNMENT_SUCCESS: users => ({users}),
-  FETCH_CURRENT_ASSIGNMENT_FAIL: error => ({error}),
+  FETCH_USERS_START: () => ({}),
+  FETCH_USERS_SUCCESS: users => ({users}),
+  FETCH_USERS_FAIL: error => ({error}),
 });
 
 export const users = handleActions(

@@ -6,8 +6,8 @@ import {
 } from '../reducers/users.reducer';
 import {take, put, call} from 'redux-saga/effects';
 
-export function* fetchUsers(params) {
-  const url = `/users`;
+export function* fetchUsers() {
+  const url = '/users';
 
   try {
     const {data: users} = yield call([baseAPI, 'get'], url);
@@ -19,7 +19,9 @@ export function* fetchUsers(params) {
 
 export function* watchFetchUsers() {
   while (true) {
-    const {payload: params} = yield take(fetchUsersStart);
-    yield call(fetchUsers, params);
+    const {
+      payload: {},
+    } = yield take(fetchUsersStart);
+    yield call(fetchUsers, {});
   }
 }

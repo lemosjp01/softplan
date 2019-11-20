@@ -5,7 +5,6 @@ import {storeReducer} from './services';
 import RouterNav from './pages/Routes';
 
 const App = () => {
-  console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
   return (
     <Provider store={storeReducer}>
       <>
