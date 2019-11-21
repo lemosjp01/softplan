@@ -21,21 +21,17 @@ const FormLogin = ({...props}) => {
           props.errors &&
           props.errors.name &&
           props.touched &&
-          props.touched.name && (
-            <ErrorMessage component={Text} name="name" />
-          )}
+          props.touched.name && <ErrorMessage component={Text} name="name" />}
       </View>
       <ButtonLogin
         onPress={() => props.handleSubmit()}
         title={'Entrar'}
         disabled={
-          props && props.values.name !== '' && !props.errors.name
-            ? false
-            : true
+          props && props.values.name !== '' && !props.errors.name ? false : true
         }
       />
     </>
   );
 };
 
-export default FormLogin;
+export default React.memo(FormLogin);

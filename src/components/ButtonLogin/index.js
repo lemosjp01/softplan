@@ -13,4 +13,4 @@ const ButtonLogin = ({title, onPress, disabled}) => {
   );
 };
 
-export default ButtonLogin;
+export default React.memo(ButtonLogin);

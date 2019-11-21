@@ -3,9 +3,13 @@ import {StyleSheet} from 'react-native';
 const styles = StyleSheet.create({
   container: {
     display: 'flex',
-    flex: 1,
+    flex: 10,
     alignItems: 'center',
-    backgroundColor: '#cdf',
+    justifyContent: 'center',
+  },
+  list: {
+    backgroundColor: '#fff',
+    flex: 9,
   },
 });
 
