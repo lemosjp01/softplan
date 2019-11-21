@@ -8,9 +8,7 @@ class RouterNav extends PureComponent {
       Login: {
         path: '/login',
         screen: Login,
-        navigationOptions: ({navigation}) => ({
-          drawerLockMode: 'locked-closed',
-        }),
+        navigationOptions: ({navigation}) => ({navigation}),
       },
       App: {
         path: '/',
