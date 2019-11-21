@@ -9,7 +9,7 @@ const App = () => {
     <Provider store={storeReducer}>
       <>
         <StatusBar
-          barStyle="dark-content"
+          barStyle="light-content"
           backgroundColor="#38bbca"
           color="#38bbca"
         />
