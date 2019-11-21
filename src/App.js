@@ -1,33 +1,21 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
-import {StyleSheet, View, Text, StatusBar} from 'react-native';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#000',
-  },
-});
+import {Provider} from 'react-redux';
+import {StatusBar} from 'react-native';
+import {storeReducer} from './services';
+import RouterNav from './pages/Routes';
 
 const App = () => {
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <View style={styles.container}>
-        <Text style={styles.text}>Hello</Text>
-      </View>
-    </>
+    <Provider store={storeReducer}>
+      <>
+        <StatusBar
+          barStyle="light-content"
+          backgroundColor="#38bbca"
+          color="#38bbca"
+        />
+        <RouterNav />
+      </>
+    </Provider>
   );
 };
 
