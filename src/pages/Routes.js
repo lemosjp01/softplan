@@ -2,6 +2,7 @@ import React, {PureComponent} from 'react';
 import {createSwitchNavigator, createAppContainer} from 'react-navigation';
 import Login from './Login';
 import TodoList from './TodoList';
+import ResponsibleTodo from './ResponsibleTodo';
 
 class RouterNav extends PureComponent {
   render() {
@@ -14,6 +15,11 @@ class RouterNav extends PureComponent {
       TodoList: {
         path: '/todo-list',
         screen: TodoList,
+        navigationOptions: ({navigation}) => ({navigation}),
+      },
+      ResponsibleTodo: {
+        path: '/responsible-todo',
+        screen: ResponsibleTodo,
         navigationOptions: ({navigation}) => ({navigation}),
       },
       App: {
@@ -39,7 +45,7 @@ class RouterNav extends PureComponent {
     };
 
     const MainRoot = createAppContainer(
-      createSwitchNavigator(Routes, Configs('TodoList')),
+      createSwitchNavigator(Routes, Configs('Login')),
     );
 
     return <MainRoot />;
