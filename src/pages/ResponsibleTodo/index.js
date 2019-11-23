@@ -17,7 +17,6 @@ const ResponsibleTodo = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log('USER: ', user);
   return (
     <View style={styles.container}>
       <React.Suspense fallback={<ActivityIndicator />}>

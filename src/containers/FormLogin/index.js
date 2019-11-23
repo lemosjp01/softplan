@@ -14,9 +14,6 @@ const LoginForm = ({data, navigation}) => {
     let users = data;
     let currentUser = capitalizeFirstLetter(user.name);
 
-    console.log('USERS: ', users);
-    console.log('CURRENT_USER: ', currentUser);
-
     let validAccess = await users.filter(a => a.name === currentUser);
 
     if (validAccess.length >= 1) {
