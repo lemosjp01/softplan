@@ -35,6 +35,7 @@ const TodoList = props => {
         title: todo.title,
         status: todo.completed,
         userResponsible: c[0].name,
+        responsibleData: c[0],
       };
     });
     return (
@@ -45,7 +46,11 @@ const TodoList = props => {
             title={item.title}
             status={item.status}
             userResponsible={item.userResponsible}
-            onPress={() => props.navigation.navigate('ResponsibleTodo')}
+            onPress={() =>
+              props.navigation.navigate('ResponsibleTodo', {
+                data: item.responsibleData,
+              })
+            }
           />
         )}
         keyExtractor={(item, key) => key.toString()}
@@ -53,8 +58,6 @@ const TodoList = props => {
     );
   }
 
-  console.log('TODOS: ', todos);
-  console.log('USERS: ', users);
   return (
     <View style={styles.container}>
       <React.Suspense fallback={<ActivityIndicator />}>

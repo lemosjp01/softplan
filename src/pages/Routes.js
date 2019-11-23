@@ -45,7 +45,7 @@ class RouterNav extends PureComponent {
     };
 
     const MainRoot = createAppContainer(
-      createSwitchNavigator(Routes, Configs('ResponsibleTodo')),
+      createSwitchNavigator(Routes, Configs('Login')),
     );
 
     return <MainRoot />;
